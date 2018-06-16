@@ -1,31 +1,39 @@
+import java.util.Date;
 
 public class Atividade {
 	
 	private String nome;
 	private String descricao;
-	private String dataEntrega;
+	private Date dataEntrega;
 	private boolean situacao;
-	private String dataNotifica;
+	//private String dataNotifica; (data de notificação a ser implementada)
 	
-	public void descricaoResumida(String descricao) {
-		
+	public Atividade(String nome, String descricao, Date dataEntrega) {
+		this.nome = nome;
+		this.descricao = descricao;
+		this.dataEntrega = dataEntrega;
+		situacao = false;
 	}
 	
 	public void realizarAtividade() {
-		
-	}
-	
-	public void atividade(String nome, String dataEntrega, String descricao, int dataNotifica) {
-		
+		situacao = true;		
 	}
 	
 	public Atividade retornaAtividade() {
 		
 		return null;
 	}
-	
-	public void notificar() {
+	//funcao de notificação a ser implantada no futuro
+	/*public void notificar() {
 		
-	}
+	}*/
 	
+	public void imprimeAtividade() {
+		if(situacao == true) {
+			System.out.println("Atividade: "+nome+"\nDescrição: "+descricao+"\nData de Entrega: 			"+dataEntrega+"\nRealizado: Sim");
+		}
+		else {
+			System.out.println("Atividade: "+nome+"\nDescrição: "+descricao+"\nData de 			Entrega: "+dataEntrega+"\nRealizado: Não");
+		}
+	}
 }

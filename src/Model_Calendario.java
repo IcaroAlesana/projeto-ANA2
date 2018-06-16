@@ -1,6 +1,9 @@
 
 public class Model_Calendario {
-	private String mes;
+	
+	//***Classe a ser implementada futuramente***
+	
+	/*private String mes;
 	private String Data;
 	
 	public void carregaFeriados() {
@@ -9,5 +12,5 @@ public class Model_Calendario {
 	
 	public void carregaAtividadesProgramadas() {
 		
-	}
+	}*/
 }
