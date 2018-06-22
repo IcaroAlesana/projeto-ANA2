@@ -1,4 +1,3 @@
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Disciplina {
@@ -7,41 +6,27 @@ public class Disciplina {
 	private ArrayList<Conteudo> ementa = new ArrayList<Conteudo>();
 	private ArrayList<Atividade> atividades = new ArrayList<Atividade>();
 	
-	public Disciplina (String nome) {
+	public Disciplina(String nome){
 		this.nome = nome;
 	}
 	
-	public ArrayList<Conteudo> getEmenta() {
+	
+	public ArrayList<Conteudo> carregaEmenta() {
 		return ementa;
 	}
-
-	public boolean addConteudo(String nomeConteudo, String descricaoConteudo) {
-		Conteudo c = new Conteudo(nomeConteudo, descricaoConteudo);
+	public ArrayList<Atividade> carregaAtividade() {
+		return atividades;
+	}
+	public String nome() {
+		return this.nome;
+	}
+	
+	
+	public void addConteudo(Conteudo c) {
 		ementa.add(c);
-		return true;
 	}
-
-	/*private String carregaEmenta() {
-		
-		return null;		
-	}*/
 	
-	public void addAtividade(String nome, String descricao, LocalDate dataEntrega) {
-		Atividade a = new Atividade(nome, descricao, dataEntrega);
+	public void addAtividade(Atividade a) {
 		atividades.add(a);
-		
-	}
-	
-	public void imprimirDisciplina() {		
-		System.out.println("Nome: "+nome+"\nConteudos"/*+apenas nomes dos conteudos+"\nAtividades: "+Atividades e prazos*/);
-	}
-	
-	public void imprimirEmenta() {
-		System.out.println(ementa);
-						
-	}
-	
-	public void imprimirAtividades() {
-		
 	}
 }

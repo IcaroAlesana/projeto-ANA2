@@ -5,7 +5,7 @@ public class Conteudo {
 	private String descricao;
 	private boolean estudado;
 	
-	public Conteudo (String nome, String descricao) {
+	public Conteudo(String nome, String descricao) {
 		this.nome = nome;
 		this.descricao = descricao;
 		estudado = false;
@@ -13,6 +13,15 @@ public class Conteudo {
 	
 	public void estudar() {
 		estudado = true;
+	}
+	public String Retornanome() {
+		return this.nome;
+	}
+	public String Retornadescricao(){
+		return this.descricao;
+	}
+	public boolean Retornaestudado(){
+		return this.estudado;
 	}
 	
 	public void imprimeConteudo() {

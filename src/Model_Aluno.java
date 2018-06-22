@@ -8,19 +8,14 @@ public class Model_Aluno {
 		this.nome = nome;
 	}
 
-	/*public void aplicarAnotacao() {
-	
-	}*/
-	
-	public String getAnotacao() {		
-		return anotacoes.toString();		
+	public ArrayList<String> RetornaAnotacao(){		
+		return this.anotacoes;		
+	}
+	public String RetornaNome(){
+		return this.nome;
 	}
 	
-	public void criaAnotacao(String anotacao) {
+	public void criaAnotacao(String anotacao){
 		anotacoes.add(anotacao);
-	}
-	
-	public void imprimeAnotacoes() {
-		System.out.println("Nome: "+nome+"\nAnotacoes: "/*Listar anotações*/);
 	}
 }

@@ -2,8 +2,8 @@
 public class View {
 
 	public static void main(String[] args) {
-		// Aqui será montado o funcionamento do sistema.
-
+        new Controler();       
+        Controler.TELA_INICIAL.setVisible(true);
 	}
 
 }

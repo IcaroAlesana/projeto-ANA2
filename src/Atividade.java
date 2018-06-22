@@ -1,16 +1,18 @@
-import java.time.LocalDate;
 
-public class Atividade {
+
+class Atividade {
 
 	private String nome;
 	private String descricao;
-	LocalDate dataEntrega;
+	private String dataEntrega;
 	private boolean situacao;
-	//private String dataNotifica; (data de notificação a ser implementada)
+	
 
-	public Atividade(String nome, String descricao, LocalDate dataEntrega) {
+	public Atividade(String nome, String descricao, String dataEntrega) {
 		this.nome = nome;
 		this.descricao = descricao;
+		//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		//LocalDate date = LocalDate.parse(dataEntrega,formatter);
 		this.dataEntrega = dataEntrega;
 		situacao = false;
 	}
@@ -18,22 +20,22 @@ public class Atividade {
 	public void realizarAtividade() {
 		situacao = true;		
 	}
-
-	public Atividade retornaAtividade() {
-
-		return null;
+	
+	public String Retornanome(){
+		return this.nome;
 	}
+	public String Retornadescrição(){
+		return this.descricao;
+	}
+	public String RetornadataEntrega(){
+		return this.dataEntrega;
+	}
+	public boolean Retornasituação(){
+		return this.situacao;
+	}
+	
 	//funcao de notificação a ser implantada no futuro
 	/*public void notificar() {
 
 	}*/
-
-	public void imprimeAtividade() {
-		if(situacao == true) {
-			System.out.println("Atividade: "+nome+"\nDescrição: "+descricao+"\nData de Entrega: "+dataEntrega+"\nRealizado: Sim");
-		}
-		else {
-			System.out.println("Atividade: "+nome+"\nDescrição: "+descricao+"\nData de Entrega: "+dataEntrega+"\nRealizado: Não");
-		}
-	}
 }
